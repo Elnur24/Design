@@ -1,0 +1,236 @@
+@font-face {
+    font-family: PlusJakartaSans-Bold;
+    src: url(../fonts/PlusJakartaSans-Bold.ttf);
+    font-weight: 700;
+}
+@font-face {
+    font-family: PlusJakartaSans-Medium;
+    src: url(../fonts/PlusJakartaSans-Medium.ttf);
+    font-weight: 500;
+}
+:root{
+    --PlusJakartaSans-Medium:PlusJakartaSans-Medium;
+    --PlusJakartaSans-Bold: PlusJakartaSans-Bold;
+    --white: #fffFFF;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    width: 1111px;
+    margin: 0 auto;
+}
+.header-btn{
+    width: 228px;
+    height: 56px;
+    border-radius: 28px;
+    background-color: #030303;
+    color: var(--white);
+    color: #FFF7F0;
+    font-family: var(--PlusJakartaSans-Bold);
+    font-size: 16px;
+    line-height: 28px; /* 175% */
+    padding-top: 13px;
+    transition: .4s;
+}
+.header-btn:hover{
+    background-color: #755CDE;
+    color: var(--white);
+}
+.hero-container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 354px 164px 164px 354px;
+    grid-template-rows: 182px 182px;
+    gap: 24px;
+}
+
+/* Первый большой блок */
+.hero-card:nth-child(1) {
+    grid-row: span 2;
+    width: 354px;
+    height: 364px;
+    border-radius: 8px;
+    background-color: #755CDE;
+}
+
+/* Маленькие карточки */
+.hero-card:nth-child(2),
+.hero-card:nth-child(3) {
+    width: 164px;
+    height: 182px;
+    border-radius: 8px;
+}
+
+.hero-card:nth-child(2) {
+    background-color: #F6A560;
+}
+
+.hero-card:nth-child(3) {
+    background-color: #F39E9E;
+}
+
+/* Средний блок */
+.hero-card:nth-child(4) {
+    width: 354px;
+    height: 182px;
+    border-radius: 8px;
+    background-color: #61C4B7;
+}
+
+/* Последние два блока (они теперь встают рядом) */
+.hero-card:nth-child(5) {
+    grid-column: 2/ 5;
+    grid-row: 2/5; /* Указываем, что этот блок стоит в 3-й колонке */
+    width: 350px; /* Делаем ширину такой же, как у соседнего */
+    height: 158px;
+    border-radius: 8px;
+    background-color: #EB7565;
+}
+
+.hero-card:nth-child(6) {
+    grid-column: 4/ 6; 
+    grid-row: 2/6;/* Ставим этот блок в последнюю колонку */
+    width: 354px; /* Даем ширину, как у большого блока */
+    height: 158px;
+    border-radius: 8px;
+    background-color: #552049; /* Замени на нужный цвет */
+}
+.hero-card__title{
+    height: auto;
+    font-family: var(--PlusJakartaSans-Bold);
+    font-size: 24px;
+    color: var(--white);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+.hero-card{
+    padding: 24px;
+}
+.hero-title{
+    text-align: center;
+    color: #030303;
+    font-size: 56px;
+    font-family: var(--PlusJakartaSans-Bold);
+    margin-bottom: 24px; 
+    text-align: center;
+}
+.hero-text{
+    font-family: var(--PlusJakartaSans-Medium);
+    color: #7A746E;
+    font-size: 18px;
+    line-height: 28px;
+    text-align: center;
+    margin-bottom: 80px;
+}
+.img1{
+    width: 128px;
+    height: 192px;
+    flex-shrink: 0;
+    margin-bottom: 70px;
+}
+.img2,
+.img3{
+    width: 64px;
+    height: 64px;
+    margin-bottom: 52px;
+}
+.img4{
+    width: 160px;
+    height: 64px;
+    flex-shrink: 0;
+    margin-bottom: 50px;
+}
+.img5,
+.img6{
+    width: 128px;
+    height: 64px;
+    flex-shrink: 0;
+    margin-bottom: 25px;
+}
+.hero-card__box{
+    display: flex;
+    justify-content: flex-end;
+}
+.hero-card__text{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+.bio-headline__content{
+    width: 540px;
+    height: 306px;
+    flex-shrink: 0;
+}
+.bio-headline__title{
+    color:  #030303;
+    font-family: var(--PlusJakartaSans-Bold);
+    font-size: 40px;
+    margin-bottom: 34px;
+}
+.bio-headline__text{
+    color: #7A746E;
+    font-family: var(--PlusJakartaSans-Medium);
+    font-size: 18px;
+    line-height: 28px;
+    margin-bottom: 32px;
+}
+.bio-btn{
+    background-color: #EB7565;
+}
+.bio-btn:hover{
+    background-color: #F6A560;
+    color: var(--white);
+}
+.work{
+    margin-top: 50px;
+}
+.work-title{
+    font-family: var(--PlusJakartaSans-Bold);
+    font-size: 32px;
+    color: #030303;
+    text-align: center;
+    margin-bottom: 50px;
+}
+.book{
+    margin-top: 100px;
+    height: 320px;
+    border-radius: 10px;
+    background-color: #030303;
+    padding-left: 65px;
+    padding-top: 81px;
+}
+.book-title{
+    color: var(--white);
+    font-family: var(--PlusJakartaSans-Bold);
+    font-size: 40px;
+    margin-bottom: 25px;
+}
+.book-text{
+    color: #FFF7F0;
+    font-family: var(--PlusJakartaSans-Medium);
+    font-size: 18px;
+}
+.book-btn{
+    width: 228px;
+    height: 56px;
+    background-color: #EB7565;
+    transform: translateX(-95px);
+    margin-top: 42px;
+    padding-top: 14px;
+    color: var(--white);
+    border-radius: 28px;
+}
+.book-btn:hover{
+    background-color: #F6A560;
+    color: var(--white);
+}
+.book-text{
+    width: 540px;
+}
+.footer{
+    margin-top: 60px;
+}
